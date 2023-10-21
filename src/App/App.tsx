@@ -3,7 +3,7 @@ import { ThemeProvider } from "react-jss";
 import useDarkMode from "../hooks/useDarkMode";
 import Wrapper from "../layout/Wrapper/Wrapper";
 import {BrowserRouter as Router} from 'react-router-dom';
-import Aside from "../layout/Aside/Aside";
+// import Aside from "../layout/Aside/Aside";
 const App = () => {
   const {themeStatus, darkModeStatus} = useDarkMode();
   const theme = {
@@ -23,7 +23,7 @@ const App = () => {
       <div className='app'>
         <Router>
           <Wrapper />
-          <Aside children={undefined} />
+          {/* <Aside children={undefined} /> */}
         </Router>
       </div>
     </ThemeProvider>

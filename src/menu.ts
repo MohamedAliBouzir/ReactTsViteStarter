@@ -15,3 +15,13 @@ export const dashboardMenu = {
         requiredPermission: null,
     },
 }
+
+export const authmenu = {
+    page404: {
+        id: 'page404',
+        text: 'Page404',
+        path: 'auth-page/404',
+        hide: true,
+        requiredPermission: null,
+    },
+}

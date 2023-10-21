@@ -1,10 +1,21 @@
 import { lazy } from 'react';
 import { RouteProps } from 'react-router-dom';
-import { dashboardMenu } from '../menu';
+import { dashboardMenu, authmenu } from '../menu';
 
 const HOME = {
-    HOME: lazy(() => import('../pages/Welcome')),
+    HOME: lazy(() => import('../pages/welcome')),
 };
+
+const AUTH = {
+    PAGE404: lazy(() => import('../pages/Page404'))
+};
+
+const authentication : RouteProps[] = [
+    {
+        path: authmenu.page404.path,
+        element: <AUTH.PAGE404 />
+    },
+]
 
 const presentation : RouteProps[] = [
     {
@@ -13,6 +24,6 @@ const presentation : RouteProps[] = [
     },
 ]
 
-const contents = [...presentation]
+const contents = [...presentation, ...authentication]
 
 export default contents;
